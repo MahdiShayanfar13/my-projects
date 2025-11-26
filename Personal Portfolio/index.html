@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <header>
+         <div  class="Navbar">
+            <div  class="menu-button" ><i class="fa-solid fa-list"></i></div>
+            <div class="logo">
+                <h2>My Portfolio</h2>
+            </div>
+            <nav>
+                 <div class="close-button" ><i class="fa-solid fa-xmark"></i></div> 
+                <ul>
+                    <li><a href="#home">Home /</a></li>
+                    <li><a href="#projects">Projects /</a></li>
+                    <li><a href="#Articles">Articles /</a></li>
+                    <li><a href="#contact">Contact /</a></li>
+                </ul>
+            </nav>
+         </div> 
+          <div class="hero">
+            <h1>Frontend Developer</h1>
+            <p>Welcome to my personal portfolio website!</p>
+          </div> 
+    </header>
+    <main>
+         <div class="container" >
+             <div class="projects" >
+                <h3>Projects</h3>
+                 <ul>
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                 </ul>
+             </div> 
+             <div class="work-experience" >
+                <h3>Work Experience</h3>
+                 <div>
+                    <p><a href="#roadmap.sh">roadmap.sh</a></p>
+                    <p>Solved all the frontend projects</p>
+                    <p class="see-more">Visit my Profile</p>
+                 </div> 
+                 <div style="border-top: 2px solid black;">
+                    <p>OpenSource Work</p>
+                    <p>Conributed to 50 opensource <br> projects Made my owen projects with 200 Github Stars.</p>
+                    <p class="see-more">Visit my Github Profile</p>
+                 </div> 
+             </div> 
+             <div class="Education" >
+                <h3>Education</h3>
+                <p>Graduated with 3.76 out of 4 <br> CGPA. Won Acme Hackathon. <br> Organized 30 sessions.</p>
+                <ul>
+                    <p>Courses I took:</p>
+                    <li>- Object Oriented Programming</li>
+                    <li>- Data Structures and Algorithms</li>
+                    <li>- Web Engineering</li>
+                    <li>- Artificial Intelligence</li>
+                    <li>- Human Computer Interaction</li>
+                    <li>- Computer Graphics</li>
+                    <li>- Database Management Systems</li>
+                    <li>- Distributed Database Systems</li>
+                    <li>- Discreet Mathematics</li>
+                </ul>
+             </div> 
+         </div> 
+         <section>
+            <h3>Reviews from my Teachers</h3>
+            <div class="reviews">
+            
+            <div class="review">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p style="opacity: 0.5;">Jane Doe <br>Assistant Professor</p>
+            </div>
+            <div class="review">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p style="opacity: 0.5;">Jane Doe <br>Assistant Professor</p>
+            </div>
+            <div class="review">
+                <p>John doe was a brilliant student; always stood out with his assignments.</p>
+                <p style="opacity: 0.5;">Jane Doe <br>Assistant Professor</p>
+            </div>
+         </div>
+         </section>
+    </main>
+
+    <footer>
+        <h3>© all rights reserved 2025</h3>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-button");
+        const closeBtn = document.querySelector(".close-button");
+        const nav = document.querySelector("nav");
+
+            menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            });
+            closeBtn.addEventListener("click", () => {
+            nav.classList.remove("active");
+            });
+    </script>
+    <script src="https://kit.fontawesome.com/a1b611e330.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.menu-button  { 
+    font-size: 25px;
+    position:  absolute;
+    right: 40px;
+    display: none;
+}
+
+.close-button {
+    display: none;
+}
+
+body {
+    width: 100vw;
+    font-family:cursive;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    height : 40vh;
+    padding: 20px 40px;
+}
+
+ul {
+     list-style: none;
+}
+
+header .Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+li a{ 
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.hero  { 
+    height : 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero h1  { 
+    font-size: 40px;
+    margin-top:150px;
+}
+
+.hero p  { 
+    margin: 12px 0;
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+
+.container  { 
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns:  repeat(3, 25% 45% 30%);
+    border: 2px  solid  black;
+}
+
+.projects, .work-experience, .Education  { 
+    padding: 20px 30px ;
+   
+}
+
+.work-experience  { 
+     border-inline: 2px  solid black;
+}
+
+.projects h3, .work-experience h3, .Education h3{ 
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.projects  { 
+    border-left: none;
+}
+
+.projects ul li  { 
+    border-bottom: 2px  solid black;
+    padding: 10px 0;
+}
+
+.projects ul  li:last-child{
+    border-bottom: none;
+ }
+
+
+.work-experience  div{ 
+    padding: 15px 0;
+} 
+
+.work-experience p  { 
+    margin-bottom: 10px;
+}
+
+.Education  p{ 
+     margin-bottom: 20px;
+}
+
+.see-more {
+    color: rgba(17, 17, 184, 0.753);
+}
+
+section  { 
+    padding: 30px 50px 100px;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 20px;
+}
+
+.reviews .review {
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 55px;
+}
+
+section h3{
+    margin-bottom: 23px;
+    font-size: 23px;
+}
+
+.reviews .review p  { 
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+footer  {
+    height : 80px;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 50px;
+ }
+
+@media screen and (max-width: 768px){ 
+    .hero  { 
+        text-align: center;
+        flex-direction: column;
+    }
+     
+    body { 
+        overflow-x: hidden; /* not full overflow, only horizontal */
+    } 
+ 
+    nav {  
+        width: 40%; 
+        height: 100vh; 
+        background-color: rgb(21, 138, 181); 
+        position: fixed; 
+        top: 0; 
+        right: 0; 
+        transform: translateX(100%);   /* hide without causing horizontal scroll */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    } 
+
+ 
+    nav.active {
+        transform: translateX(0);  /* show when clicked */
+    }
+ 
+    .close-button {
+     display: block;
+     padding: 20px;
+     text-align: right;
+    }
+
+    .close-button i{
+     font-size: 30px;
+    }
+
+    nav ul  {  
+        display: flex; 
+        flex-direction: column; 
+        text-align: right; 
+    } 
+ 
+    nav ul li  { 
+        width: 100%; 
+        padding: 10px 20px; 
+    } 
+ 
+    .menu-button  {  
+        display: block; 
+        cursor: pointer; 
+    } 
+
+    .projects, .Education  { 
+        border:  none ;
+    }
+
+    .container  , .reviews{ 
+        grid-template-columns:  100%;
+        grid-row-gap: 20px;
+        border-left: none;
+    }
+
+   .reviews .review p  { 
+    font-size: 14px;
+    }
+
+    footer  { 
+        font-size: 15px;
+    }
+}
+
